@@ -540,6 +540,9 @@
       white-space: nowrap;
       margin-top: 2px;
       border: 1px solid var(--celeste);
+      min-width: 90px;
+      text-align: center;
+      flex-shrink: 0;
     }
     .formation-list li .desc {
       font-size: 0.83rem;
@@ -894,6 +897,8 @@
       width: 100%;
       padding: 15px;
       font-size: 0.95rem;
+      justify-content: center;
+      text-align: center;
     }
 
     /* Mensajes de estado del formulario */
@@ -1207,16 +1212,16 @@
 
           <div class="hero-stats">
             <div class="stat-item">
-              <div class="stat-number">+5</div>
+              <div class="stat-number">+3</div>
               <div class="stat-label">Años de<br>experiencia</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">+150</div>
-              <div class="stat-label">Familias<br>atendidas</div>
+              <div class="stat-number">1°</div>
+              <div class="stat-label">Premio<br>Sochimi 2020</div>
             </div>
             <div class="stat-item">
               <div class="stat-number">3</div>
-              <div class="stat-label">Especialidades<br>pediátricas</div>
+              <div class="stat-label">Áreas de<br>especialización</div>
             </div>
           </div>
         </div>
@@ -1251,7 +1256,7 @@
             <div class="icon-wrap">👶</div>
             <div>
               <strong>Especialista pediátrica</strong>
-              <div style="font-size:0.72rem;color:var(--gray-text);">0 a 12 años</div>
+              <div style="font-size:0.72rem;color:var(--gray-text);">Prematurez/primera infancia</div>
             </div>
           </div>
         </div>
@@ -1291,7 +1296,7 @@
           <h2 class="section-title">Comprometida con el desarrollo de cada niño</h2>
 
           <p class="about-description">
-            Soy Karen Zelada, kinesióloga titulada de la Universidad de Chile, con más de 5 años de experiencia
+            Soy Karen Zelada, kinesióloga titulada de la Universidad Andrés Bello, con más de 3 años de experiencia
             dedicados exclusivamente al ámbito pediátrico. Me apasiona acompañar el desarrollo motor de los niños
             y niñas desde sus primeras etapas de vida, trabajando siempre de la mano con las familias para lograr
             los mejores resultados posibles.
@@ -1338,31 +1343,38 @@
             <h3>🎓 Formación académica</h3>
             <ul class="formation-list">
               <li>
-                <span class="year">2018</span>
+                <span class="year">2015–2022</span>
                 <span class="desc">
                   <strong>Licenciatura en Kinesiología</strong>
-                  Universidad de Chile · Santiago
+                  Universidad Andrés Bello · Santiago
                 </span>
               </li>
               <li>
-                <span class="year">2019</span>
+                <span class="year">2022–2023</span>
                 <span class="desc">
-                  <strong>Diplomado en Kinesiología Pediátrica</strong>
-                  Pontificia Universidad Católica de Chile
+                  <strong>Diplomado en Kinesiología Neonatal y Seguimiento del Recién Nacido Prematuro</strong>
+                  Universidad del Desarrollo
                 </span>
               </li>
               <li>
-                <span class="year">2021</span>
+                <span class="year">2025</span>
                 <span class="desc">
-                  <strong>Certificación en Estimulación Temprana</strong>
-                  Instituto de Rehabilitación Infantil, Santiago
+                  <strong>Diplomado en Manejo Respiratorio Neonatal</strong>
+                  Universidad del Desarrollo
                 </span>
               </li>
               <li>
-                <span class="year">2023</span>
+                <span class="year">2020</span>
                 <span class="desc">
-                  <strong>Curso de Integración Sensorial Pediátrica</strong>
-                  Universidad Andrés Bello
+                  <strong>+120 hrs en ventilación mecánica y soporte ventilatorio</strong>
+                  Inspiraxion (cursos especializados)
+                </span>
+              </li>
+              <li>
+                <span class="year">2020</span>
+                <span class="desc">
+                  <strong>🏆 1° lugar — Premio Sochimi</strong>
+                  Trabajos libres: estimación de distensibilidad dinámica toracopulmonar en modelos neonatales de ventilación mecánica de alta frecuencia
                 </span>
               </li>
             </ul>
@@ -1577,6 +1589,9 @@
             Atiendo en toda la Región Metropolitana y comunas cercanas.
             Si tienes dudas, escríbeme directamente por WhatsApp.
           </p>
+          <p>
+            🕘 Horario de atención: <strong>Lunes a Viernes, 09:00 – 18:00 hrs.</strong>
+          </p>
 
           <div class="contact-items">
             <div class="contact-item">
@@ -1637,20 +1652,28 @@
                 <input type="text" id="nombre" name="nombre" placeholder="Ej: María González" required />
               </div>
               <div class="form-group">
-                <label for="edad">Edad del paciente *</label>
-                <input type="text" id="edad" name="edad" placeholder="Ej: 2 años 3 meses" required />
+                <label for="nombre_nino">Nombre del niño/a *</label>
+                <input type="text" id="nombre_nino" name="nombre_nino" placeholder="Ej: Sofía González" required />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
+                <label for="edad">Edad del paciente *</label>
+                <input type="text" id="edad" name="edad" placeholder="Ej: 2 años 3 meses" required />
+              </div>
+              <div class="form-group">
                 <label for="email">Correo electrónico *</label>
                 <input type="email" id="email" name="email" placeholder="tucorreo@email.com" required />
               </div>
+            </div>
+
+            <div class="form-row">
               <div class="form-group">
                 <label for="telefono">Teléfono / WhatsApp *</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="+56 9 XXXX XXXX" required />
               </div>
+              <div></div>
             </div>
 
             <div class="form-group">
@@ -1819,14 +1842,15 @@
       const msgDiv = document.getElementById('form-message');
 
       // Recoger valores
-      const nombre     = document.getElementById('nombre').value.trim();
-      const edad       = document.getElementById('edad').value.trim();
-      const email      = document.getElementById('email').value.trim();
-      const telefono   = document.getElementById('telefono').value.trim();
+      const nombre      = document.getElementById('nombre').value.trim();
+      const nombre_nino = document.getElementById('nombre_nino').value.trim();
+      const edad        = document.getElementById('edad').value.trim();
+      const email       = document.getElementById('email').value.trim();
+      const telefono    = document.getElementById('telefono').value.trim();
       const diagnostico = document.getElementById('diagnostico').value.trim();
 
       // Validación básica en el cliente
-      if (!nombre || !edad || !email || !telefono || !diagnostico) {
+      if (!nombre || !nombre_nino || !edad || !email || !telefono || !diagnostico) {
         showMessage('Por favor completa todos los campos antes de enviar.', 'error');
         return;
       }
@@ -1840,7 +1864,7 @@
       btn.disabled = true;
       msgDiv.style.display = 'none';
 
-      const payload = { nombre, edad, email, telefono, diagnostico };
+      const payload = { nombre, nombre_nino, edad, email, telefono, diagnostico };
 
       try {
         const response = await fetch(APPS_SCRIPT_URL, {
