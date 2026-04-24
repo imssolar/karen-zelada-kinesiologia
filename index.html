@@ -211,6 +211,8 @@
     }
     .nav-links a:hover { color: var(--celeste-dark); }
     .nav-links a:hover::after { width: 100%; }
+    .nav-links a.nav-active { color: var(--celeste-dark); font-weight: 600; }
+    .nav-links a.nav-active::after { width: 100%; }
 
     .nav-cta { margin-left: 8px; }
 
@@ -1235,13 +1237,7 @@
             </div>
           -->
           <div class="photo-bg-circle">
-            <div class="photo-placeholder">
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
-              </svg>
-              <p>Reemplazar con foto<br>de Karen Zelada</p>
-            </div>
+            <img src="imagenes/FOTO_2.jpeg" alt="Karen Zelada, Kinesióloga Pediátrica" style="width:100%;height:100%;object-fit:cover;" />
           </div>
 
           <div class="hero-float-card card-1">
@@ -1279,13 +1275,7 @@
             REEMPLAZA el .about-photo-inner por tu foto:
             <img src="foto-karen-2.jpg" alt="Karen Zelada" style="width:100%;border-radius:24px;object-fit:cover;" />
           -->
-          <div class="about-photo-inner">
-            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
-            <p>Foto de Karen Zelada</p>
-          </div>
+          <img src="imagenes/FOTO_1.jpeg" alt="Karen Zelada, Kinesióloga Pediátrica" style="width:100%;max-height:480px;border-radius:24px;object-fit:cover;display:block;" />
           <div class="about-decoration"></div>
           <div class="about-decoration-2"></div>
         </div>
@@ -1598,8 +1588,7 @@
               <div class="ci-icon">📍</div>
               <div class="ci-text">
                 <strong>Ubicación</strong>
-                <!--REEMPLAZA: Pon la ciudad/comuna real-->
-                <span>[CIUDAD, CHILE] · Atención a domicilio</span>
+                <span>Región Metropolitana · Atención a domicilio</span>
               </div>
             </div>
 
@@ -1607,8 +1596,7 @@
               <div class="ci-icon">📧</div>
               <div class="ci-text">
                 <strong>Correo electrónico</strong>
-                <!--REEMPLAZA: Pon tu email real-->
-                <span>[EMAIL DE CONTACTO]</span>
+                <span>klgakarenzelada@gmail.com</span>
               </div>
             </div>
 
@@ -1616,8 +1604,7 @@
               <div class="ci-icon">📱</div>
               <div class="ci-text">
                 <strong>WhatsApp / Teléfono</strong>
-                <!--REEMPLAZA: Pon tu número real-->
-                <span>[NÚMERO DE WHATSAPP]</span>
+                <span>+569 89200266</span>
               </div>
             </div>
 
@@ -1625,14 +1612,12 @@
               <div class="ci-icon">📸</div>
               <div class="ci-text">
                 <strong>Instagram</strong>
-                <!--REEMPLAZA: Pon tu usuario de Instagram-->
-                <span>@[INSTAGRAM]</span>
+                <span>@primerospasos.kine</span>
               </div>
             </div>
           </div>
 
-          <!--REEMPLAZA el número de WhatsApp en el href: https://wa.me/56XXXXXXXXX -->
-          <a href="https://wa.me/56XXXXXXXXX?text=Hola%20Karen%2C%20quiero%20agendar%20una%20hora" target="_blank" class="whatsapp-btn">
+          <a href="https://wa.me/56989200266?text=Hola%20Karen%2C%20quiero%20agendar%20una%20hora" target="_blank" class="whatsapp-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
@@ -1718,16 +1703,14 @@
             motor de tu hijo/a con amor y profesionalismo.
           </p>
           <div class="social-links">
-            <!--REEMPLAZA: Pon tu URL de Instagram real-->
-            <a href="https://instagram.com/[INSTAGRAM]" target="_blank" class="social-link" title="Instagram" aria-label="Instagram">
+            <a href="https://instagram.com/primerospasos.kine" target="_blank" class="social-link" title="Instagram" aria-label="Instagram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
               </svg>
             </a>
-            <!--REEMPLAZA: Pon tu número de WhatsApp real-->
-            <a href="https://wa.me/56XXXXXXXXX" target="_blank" class="social-link" title="WhatsApp" aria-label="WhatsApp">
+            <a href="https://wa.me/56989200266" target="_blank" class="social-link" title="WhatsApp" aria-label="WhatsApp">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
@@ -1754,13 +1737,11 @@
           <ul class="footer-contact-list">
             <li>
               <span>📍</span>
-              <!--REEMPLAZA: tu ciudad/comuna real-->
-              <span>[CIUDAD, CHILE]</span>
+              <span>Región Metropolitana</span>
             </li>
             <li>
               <span>📧</span>
-              <!--REEMPLAZA: tu email real-->
-              <span>[EMAIL DE CONTACTO]</span>
+              <span>klgakarenzelada@gmail.com</span>
             </li>
             <li>
               <span>📱</span>
@@ -1769,8 +1750,7 @@
             </li>
             <li>
               <span>📸</span>
-              <!--REEMPLAZA: tu usuario Instagram-->
-              <span>@[INSTAGRAM]</span>
+              <span>@primerospasos.kine</span>
             </li>
           </ul>
         </div>
@@ -1832,6 +1812,34 @@
     }, { threshold: 0.15 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+
+    // ---- Scroll-spy: marcar link activo según sección visible ----
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    function setActiveNav(id) {
+      navLinks.forEach(a => {
+        a.classList.toggle('nav-active', a.getAttribute('href') === '#' + id);
+      });
+    }
+
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveNav(entry.target.id);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('section[id]').forEach(s => spyObserver.observe(s));
+
+    // Marcar también al hacer clic en un link del menú
+    navLinks.forEach(a => {
+      a.addEventListener('click', () => {
+        const id = a.getAttribute('href').slice(1);
+        setActiveNav(id);
+      });
+    });
 
 
     // ---- Formulario de contacto ----
