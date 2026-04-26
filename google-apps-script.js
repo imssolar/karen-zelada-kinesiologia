@@ -25,8 +25,7 @@
  * ================================================================
  */
 
-// ⚠️ REEMPLAZA ESTE VALOR con el ID de tu Google Sheet
-const SPREADSHEET_ID = "TU_SPREADSHEET_ID_AQUI";
+const SPREADSHEET_ID = "1H1EgJnUrMknn6ynnPxvLTBOY0ejcBhxADY8v3VBTHo0";
 
 // Nombre de la hoja dentro del archivo de Google Sheets
 const SHEET_NAME = "Solicitudes";
@@ -63,7 +62,7 @@ function doPost(e) {
     }
 
     // ── Validar que lleguen todos los campos requeridos ──
-    const camposRequeridos = ["nombre", "edad", "email", "telefono", "diagnostico"];
+    const camposRequeridos = ["nombre", "nombre_nino", "edad", "email", "telefono", "diagnostico"];
     const camposFaltantes = camposRequeridos.filter(campo => !data[campo] || data[campo].toString().trim() === "");
 
     if (camposFaltantes.length > 0) {
@@ -89,6 +88,7 @@ function doPost(e) {
       sheet.appendRow([
         "Fecha y Hora",
         "Nombre Apoderado",
+        "Nombre Niño/a",
         "Edad Paciente",
         "Correo",
         "Teléfono",
@@ -96,7 +96,7 @@ function doPost(e) {
       ]);
 
       // Dar formato a los encabezados
-      const headerRange = sheet.getRange(1, 1, 1, 6);
+      const headerRange = sheet.getRange(1, 1, 1, 7);
       headerRange.setBackground("#7EC8E3");
       headerRange.setFontWeight("bold");
       headerRange.setFontColor("#1E293B");
@@ -112,28 +112,27 @@ function doPost(e) {
     sheet.appendRow([
       fechaHora,
       data.nombre.trim(),
+      data.nombre_nino.trim(),
       data.edad.trim(),
       data.email.trim(),
       data.telefono.trim(),
       data.diagnostico.trim()
     ]);
 
-    // ── Opcional: enviar notificación por email a Karen ──
-    // Descomenta y configura si deseas recibir un email por cada solicitud:
-    /*
-    const EMAIL_NOTIFICACION = "karen@ejemplo.com"; // ← Reemplaza con tu email
+    // ── Notificación por email a Karen ──
+    const EMAIL_NOTIFICACION = "klgakarenzelada@gmail.com";
     GmailApp.sendEmail(
       EMAIL_NOTIFICACION,
       "Nueva solicitud de sesión — " + data.nombre,
-      "Has recibido una nueva solicitud:\n\n" +
+      "Has recibido una nueva solicitud desde tu sitio web:\n\n" +
       "Apoderado: " + data.nombre + "\n" +
+      "Nombre niño/a: " + data.nombre_nino + "\n" +
       "Edad paciente: " + data.edad + "\n" +
       "Email: " + data.email + "\n" +
       "Teléfono: " + data.telefono + "\n" +
       "Diagnóstico: " + data.diagnostico + "\n\n" +
       "Fecha: " + fechaHora
     );
-    */
 
     return buildResponse({ success: true });
 
