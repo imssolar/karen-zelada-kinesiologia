@@ -62,7 +62,7 @@ function doPost(e) {
     }
 
     // ── Validar que lleguen todos los campos requeridos ──
-    const camposRequeridos = ["nombre", "nombre_nino", "edad", "email", "telefono", "diagnostico"];
+    const camposRequeridos = ["nombre", "nombre_nino", "edad", "email", "telefono", "comuna", "direccion", "diagnostico"];
     const camposFaltantes = camposRequeridos.filter(campo => !data[campo] || data[campo].toString().trim() === "");
 
     if (camposFaltantes.length > 0) {
@@ -92,11 +92,13 @@ function doPost(e) {
         "Edad Paciente",
         "Correo",
         "Teléfono",
+        "Comuna",
+        "Dirección",
         "Diagnóstico / Motivo"
       ]);
 
       // Dar formato a los encabezados
-      const headerRange = sheet.getRange(1, 1, 1, 7);
+      const headerRange = sheet.getRange(1, 1, 1, 9);
       headerRange.setBackground("#7EC8E3");
       headerRange.setFontWeight("bold");
       headerRange.setFontColor("#1E293B");
@@ -116,6 +118,8 @@ function doPost(e) {
       data.edad.trim(),
       data.email.trim(),
       data.telefono.trim(),
+      data.comuna.trim(),
+      data.direccion.trim(),
       data.diagnostico.trim()
     ]);
 
@@ -130,6 +134,8 @@ function doPost(e) {
       "Edad paciente: " + data.edad + "\n" +
       "Email: " + data.email + "\n" +
       "Teléfono: " + data.telefono + "\n" +
+      "Comuna: " + data.comuna + "\n" +
+      "Dirección: " + data.direccion + "\n" +
       "Diagnóstico: " + data.diagnostico + "\n\n" +
       "Fecha: " + fechaHora
     );

@@ -1672,7 +1672,15 @@
                 <label for="telefono">Teléfono / WhatsApp *</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="+56 9 XXXX XXXX" required />
               </div>
-              <div></div>
+              <div class="form-group">
+                <label for="comuna">Comuna *</label>
+                <input type="text" id="comuna" name="comuna" placeholder="Ej: Providencia" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Dirección del domicilio *</label>
+              <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. Ejemplo 1234, depto 5" required />
             </div>
 
             <div class="form-group">
@@ -1868,10 +1876,12 @@
       const edad        = document.getElementById('edad').value.trim();
       const email       = document.getElementById('email').value.trim();
       const telefono    = document.getElementById('telefono').value.trim();
+      const comuna      = document.getElementById('comuna').value.trim();
+      const direccion   = document.getElementById('direccion').value.trim();
       const diagnostico = document.getElementById('diagnostico').value.trim();
 
       // Validación básica en el cliente
-      if (!nombre || !nombre_nino || !edad || !email || !telefono || !diagnostico) {
+      if (!nombre || !nombre_nino || !edad || !email || !telefono || !comuna || !direccion || !diagnostico) {
         showMessage('Por favor completa todos los campos antes de enviar.', 'error');
         return;
       }
@@ -1885,7 +1895,7 @@
       btn.disabled = true;
       msgDiv.style.display = 'none';
 
-      const payload = { nombre, nombre_nino, edad, email, telefono, diagnostico };
+      const payload = { nombre, nombre_nino, edad, email, telefono, comuna, direccion, diagnostico };
 
       try {
         const response = await fetch(APPS_SCRIPT_URL, {
