@@ -25,7 +25,7 @@
  * ================================================================
  */
 
-const SPREADSHEET_ID = "1H1EgJnUrMknn6ynnPxvLTBOY0ejcBhxADY8v3VBTHo0";
+const SPREADSHEET_ID = "1an6AsQFwnoY2HqqbqkNqG6BCa_WM9-T9oSHhkgMpwmA";
 
 // Nombre de la hoja dentro del archivo de Google Sheets
 const SHEET_NAME = "Solicitudes";
