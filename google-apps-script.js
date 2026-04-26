@@ -123,7 +123,7 @@ function doPost(e) {
     const EMAIL_NOTIFICACION = "klgakarenzelada@gmail.com";
     GmailApp.sendEmail(
       EMAIL_NOTIFICACION,
-      "Nueva solicitud de sesión — " + data.nombre,
+      "Nueva solicitud de evaluación — " + data.nombre,
       "Has recibido una nueva solicitud desde tu sitio web:\n\n" +
       "Apoderado: " + data.nombre + "\n" +
       "Nombre niño/a: " + data.nombre_nino + "\n" +
